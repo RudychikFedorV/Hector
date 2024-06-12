@@ -1,0 +1,21 @@
+:root {
+  --ff: "Montserrat", sans-serif;
+  --sf: "Roboto", sans-serif;
+  --transition: 0.2s all ease-in-out;
+
+  --txt-700-24-ff: normal 700 24px / 100% var(--ff);
+  --txt-700-14-ff: normal 700 14px / 100% var(--ff);
+  --txt-500-20-ff: normal 500 20px / 100% var(--ff);
+  --txt-500-18-ff: normal 500 18px / 100% var(--ff);
+  --txt-400-18-ff: normal 400 18px / 100% var(--ff);
+
+  --black-1: #0f0f0f;
+  --grey: #b2b2b2;
+  --white: #fff;
+  --grey-2: #878787;
+  --grey-3: #cecece;
+  --red: #d00000;
+  --grey-4: #e7e7e7;
+  --grey-7: #6c6c6c;
+  --c-box-shadow: 0 102px 124px 0 rgba(0, 0, 0, 0.25);
+}
