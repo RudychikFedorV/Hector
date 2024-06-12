@@ -69,4 +69,10 @@
             fill="#0F0F0F" />
     </symbol>
 
+    <symbol width="748" height="864" viewBox="0 0 748 864" fill="none" id='welcome'>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M374 91.739L79.4222 261.87V602.131L374 772.261L668.578 602.131V261.87L374 91.739ZM748 216L374 0L0 216V648L374 864L748 648V216Z"
+            fill="black" fill-opacity="0.05" />
+    </symbol>
+
 </svg>
