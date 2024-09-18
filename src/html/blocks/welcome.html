@@ -1,29 +1,126 @@
 <section class="welcome">
     <div class="container">
-        <div class="welcome-row">
-
-            <div class="welcome-left">
-                <h1 class="welcome-left__title">МУЖСКАЯ<br>КОЛЛЕКЦИЯ</h1>
-                <p class="welcome-left__desc">Распродажа коллекций со скидками до 50%, <br>
-                    доставка до вашего склада
-                </p>
-                <a href="#!" class="welcome-left__btn">ПОДРОБНЕЕ</a>
-            </div>
-
-            <div class="welcome-right">
-                <div class="welcome-right__user">
-                    <img src="img/welcome/welcome-user.png" alt="Welcome User">
+        <div class="fade mySlider">
+            <div class="welcome-row">
+                <div class="welcome-left">
+                    <h1 class="welcome-left__title">МУЖСКАЯ<br>КОЛЛЕКЦИЯ</h1>
+                    <p class="welcome-left__desc">Распродажа коллекций со скидками до 50%, <br>
+                        доставка до вашего склада
+                    </p>
+                    <a href="#!" class="welcome-left__btn">ПОДРОБНЕЕ</a>
                 </div>
-                <!-- <svg class="welcome-right__logo" width="748" height="864">
-                    <use xlink:href="img/sprites.svg#welcome"></use>
-                </svg> -->
-                <span class="welcome-right__pagination">
-                    <span>01</span>
-                    <span class="number">- 02</span>
-                    <span>03</span>
-                    <span>04</span>
-                </span>
+                <div class="welcome-right">
+                    <div class="welcome-right__user">
+                        <img src="img/welcome/user.png" alt="Welcome User">
+                        <span class="welcome-right__pagination">
+                            <span class="active" onclick="currentSlide(1)">-01</span>
+                            <span class="dot" onclick="currentSlide(2)">02</span>
+                            <span class="dot" onclick="currentSlide(3)">03</span>
+                            <span class="dot" onclick="currentSlide(4)">04</span>
+                        </span>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="fade mySlider">
+            <div class="welcome-row">
+                <div class="welcome-left">
+                    <h1 class="welcome-left__title">МУЖСКАЯ<br>КОЛЛЕКЦИЯ</h1>
+                    <p class="welcome-left__desc">Распродажа коллекций со скидками до 50%, <br>
+                        доставка до вашего склада
+                    </p>
+                    <a href="#!" class="welcome-left__btn">ПОДРОБНЕЕ</a>
+                </div>
+                <div class="welcome-right">
+                    <div class="welcome-right__user">
+                        <img src="img/welcome/user.png" alt="Welcome User">
+                        <span class="welcome-right__pagination">
+                            <span class="dot" onclick="currentSlide(1)">01</span>
+                            <span class="active" onclick="currentSlide(2)">-02</span>
+                            <span class="dot" onclick="currentSlide(3)">03</span>
+                            <span class="dot" onclick="currentSlide(4)">04</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="fade mySlider">
+            <div class="welcome-row">
+                <div class="welcome-left">
+                    <h1 class="welcome-left__title">МУЖСКАЯ<br>КОЛЛЕКЦИЯ</h1>
+                    <p class="welcome-left__desc">Распродажа коллекций со скидками до 50%, <br>
+                        доставка до вашего склада
+                    </p>
+                    <a href="#!" class="welcome-left__btn">ПОДРОБНЕЕ</a>
+                </div>
+                <div class="welcome-right">
+                    <div class="welcome-right__user">
+                        <img src="img/welcome/user.png" alt="Welcome User">
+                        <span class="welcome-right__pagination">
+                            <span class="dot" onclick="currentSlide(1)">01</span>
+                            <span class="dot" onclick="currentSlide(2)">02</span>
+                            <span class="active" onclick="currentSlide(3)">-03</span>
+                            <span class="dot" onclick="currentSlide(4)">04</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="fade mySlider">
+            <div class="welcome-row">
+                <div class="welcome-left">
+                    <h1 class="welcome-left__title">МУЖСКАЯ<br>КОЛЛЕКЦИЯ</h1>
+                    <p class="welcome-left__desc">Распродажа коллекций со скидками до 50%, <br>
+                        доставка до вашего склада
+                    </p>
+                    <a href="#!" class="welcome-left__btn">ПОДРОБНЕЕ</a>
+                </div>
+                <div class="welcome-right">
+                    <div class="welcome-right__user">
+                        <img src="img/welcome/user.png" alt="Welcome User">
+                        <span class="welcome-right__pagination">
+                            <span class="dot" onclick="currentSlide(1)">01</span>
+                            <span class="dot" onclick="currentSlide(2)">02</span>
+                            <span class="dot" onclick="currentSlide(3)">03</span>
+                            <span class="active" onclick="currentSlide(4)">-04</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+<script>
+    let slideIndex = 1;
+    const plusSlides = (n) => {
+        showSlides((slideIndex += n));
+    };
+    const currentSlide = (n) => {
+        showSlides((slideIndex = n));
+    };
+    const showSlides = (n) => {
+        let index;
+        const slides = document.getElementsByClassName("mySlider");
+        const dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (let index = 0; index < slides.length; index++) {
+            slides[index].style.display = "none";
+        }
+        for (let index = 0; index < dots.length; index++) {
+            dots[index].className = dots[index].className.replace("active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    };
+    showSlides(slideIndex);
+</script>
