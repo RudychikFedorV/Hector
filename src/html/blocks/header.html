@@ -1,52 +1,63 @@
 <header class="header" aria-label="header section">
 	<div class="container">
-		<section class="header-blocks">
-
+		<div class="header-blocks">
 			<nav class="header-nav" aria-label="header navigation">
-				<ul class="header-list" aria-label="list navigation">
-
-					<div class="header-list__dropdown header-dropdown">
-						<li class="header-item"><a class="header-link" href="#!">КАТАЛОГ</a></li>
-						<svg class="header-item__icon arrow-btn" width="13" height="8" aria-label="img dropdown">
-							<use xlink:href="img/sprites.svg#dropdown"></use>
-						</svg>
-						
-						<div class="header-dropdown__catalog dropdown-catalog">
-							@@include('catalog.html')
-						</div>
-					</div>
-
+				<div class="header-backdrop" id="headerBackdrop" onclick="navToggle()"></div>
+				<ul class="header-list" id="headerUl" aria-label="list navigation">
+					<a href="./index.html" class="header-nav-logo" aria-label="icon logo">
+						<img src="img/header/logo.svg" alt="Logo">
+					</a>
+					<li class="header-item">
+						<a class="header-link" href="#!">КАТАЛОГ
+							<div class="header-link__arrow">
+								<img src="img/header/arrow.svg" alt="Dropdown">
+							</div>
+						</a>
+					</li>
 					<li class="header-item"><a class="header-link" href="#!">SALE</a></li>
 					<li class="header-item"><a class="header-link" href="#!">ОПТ</a></li>
 					<li class="header-item"><a class="header-link" href="#!">О НАС</a></li>
 					<li class="header-item"><a class="header-link" href="#!">ОТЗЫВЫ</a></li>
 					<li class="header-item"><a class="header-link" href="#!">ДОСТАВКА И ОПЛАТА</a></li>
 					<li class="header-item"><a class="header-link" href="#!">КОНТАКТЫ</a></li>
+					<span class="material-icons icon-close" onclick="navToggle()">close</span>
+					<div class="header-nav-icons">
+						<a href="#!" class="header-icons__icon">
+							<img src="img/header/user.svg" alt="User">
+						</a>
+						<a href="#!" class="header-icons__icon">
+							<img src="img/header/like.svg" alt="Like">
+						</a>
+						<a href="#!" class="header-icons__icon">
+							<img src="img/header/cart.svg" alt="Cart">
+						</a>
+					</div>
 				</ul>
+				<span class="material-icons icon-menu" onclick="navToggle()">menu</span>
 			</nav>
-
-			<a href="/" class="header-logo" aria-label="icon logo">
-				<svg class="header-logo__icon" width="122" height="104">
-					<use xlink:href="img/sprites.svg#logo"></use>
-				</svg>
+			<a href="./index.html" class="header-logo" aria-label="icon logo">
+				<img src="img/header/logo.svg" alt="Logo">
 			</a>
-
 			<div class="header-icons">
-				<svg class="header-icons__icon" width="25" height="25">
-					<use xlink:href="img/sprites.svg#search"></use>
-				</svg>
-				<svg class="header-icons__icon" width="28" height="25">
-					<use xlink:href="img/sprites.svg#like"></use>
-				</svg>
-				<svg class="header-icons__icon" width="30" height="25">
-					<use xlink:href="img/sprites.svg#cart"></use>
-				</svg>
-				<svg class="header-icons__icon" width="22" height="25">
-					<use xlink:href="img/sprites.svg#user"></use>
-				</svg>
-
+				<a href="#!" class="header-icons__icon">
+					<img src="img/header/search.svg" alt="Search">
+				</a>
+				<a href="#!" class="header-icons__icon">
+					<img src="img/header/like.svg" alt="Like">
+				</a>
+				<a href="#!" class="header-icons__icon">
+					<img src="img/header/cart.svg" alt="Cart">
+				</a>
+				<a href="#!" class="header-icons__icon">
+					<img src="img/header/user.svg" alt="User">
+				</a>
 			</div>
-
-		</section>
+		</div>
 	</div>
 </header>
+<script>
+	function navToggle() {
+		document.getElementById("headerUl").classList.toggle("_active");
+		document.getElementById("headerBackdrop").classList.toggle("_active");
+	}
+</script>

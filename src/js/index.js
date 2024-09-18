@@ -1,2 +1,2 @@
-import { initializeDropdown } from "./modules/dropdown.js";
-initializeDropdown();
+// import { initializeDropdown } from "./modules/dropdown.js";
+// initializeDropdown();

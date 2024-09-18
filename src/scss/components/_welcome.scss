@@ -1,14 +1,13 @@
 .welcome {
-  &-block {
+  &-row {
     display: flex;
+    // flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
   }
-
-  &-content {
+  &-left {
     max-width: 728px;
-
     &__title {
       font: var(--txt-900-96-ff);
       letter-spacing: 0.07em;
@@ -36,18 +35,36 @@
     }
   }
 
-  &-img {
-    position: relative;
-
+  &-right {
+    // max-width: 737px;
+    // width: 100%;
+    // height: 1044px;
+   
     &__user {
-      padding-right: 133px;
-      margin-top: -104px;
-    }
-    &__logo {
-      position: absolute;
-      right: 115px;
-      top: 0;
-      z-index: -1;
+    position: relative;
+    transform: translateY(-50px);
+    width: 737px;
+    height: 1044px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      // &::before {
+      //   content: "";
+      //   display: inline-block;
+      //   background-image: url(../img/welcome/logo.svg);
+      //   background-repeat: no-repeat;
+      //   background-size: cover;
+      //   position: absolute;
+      //   top: calc(50% - 864px);
+      //   left: calc(50% - 748px);
+      //   transform: translate(50%, 50%);
+      //   // width: 748px;
+      //   // height: 864px;
+      //   z-index: -1;
+      // }
     }
     &__pagination {
       position: absolute;
@@ -75,6 +92,5 @@
         color: var(--black-1);
       }
     }
-    
   }
 }

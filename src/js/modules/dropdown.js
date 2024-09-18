@@ -1,7 +1,7 @@
 export function initializeDropdown() {
   document.addEventListener("DOMContentLoaded", function () {
-    var arrowbtn = document.querySelector(".arrow-btn");
-    var dropdownContent = document.querySelector(".dropdown-catalog");
+    const arrowbtn = document.querySelector(".arrow-btn");
+    const dropdownContent = document.querySelector(".dropdown-catalog");
 
     arrowbtn.addEventListener("click", function () {
       dropdownContent.classList.toggle("show");
