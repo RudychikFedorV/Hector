@@ -1,0 +1,32 @@
+<div class="new">
+    <div class="container">
+        <div class="new-row">
+            <div class="new-top">
+                <div class="new-top-tab new-top-tab1">Новинки</div>
+                <div class="new-top-tab">ТОП продаж</div>
+                <div class="new-top-tab">Скидки</div>
+            </div>
+            <div class="new-body">
+                <div class="new-body-content">
+                    <div class="new-body-contents">
+                        @@loop('new-body-item.html', '../data/new.json')
+                    </div>
+                    <a href="#!" class="welcome-left__btn">Посмотреть каталог</a>
+
+                </div>
+                <div class="new-body-content">
+                    <div class="new-body-contents">
+                        @@loop('new-body-item.html', '../data/newTop.json')
+                    </div>
+                    <a href="#!" class="welcome-left__btn">Посмотреть каталог</a>
+                </div>
+                <div class="new-body-content">
+                    <div class="new-body-contents">
+                        @@loop('new-body-item.html', '../data/newDiscounts.json')
+                    </div>
+                    <a href="#!" class="welcome-left__btn">Посмотреть каталог</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -46,6 +46,7 @@
       display: inline-block;
       padding: 25px 90px;
       border: 1px solid var(--grey-2);
+      text-transform: uppercase;
       transition: var(--transition);
       &:hover {
         border: 1px solid var(--red);
