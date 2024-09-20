@@ -2,11 +2,12 @@ const tabsNew = () => {
   let tab;
   let content;
 
-  window.onload = () => {
+  const initTabsNew = () => {
     tab = document.getElementsByClassName("new-top-tab");
     content = document.getElementsByClassName("new-body-content");
     hideTabsContent(1);
   };
+
   const hideTabsContent = (a) => {
     for (let index = a; index < content.length; index++) {
       content[index].classList.remove("show");
@@ -14,9 +15,10 @@ const tabsNew = () => {
       tab[index].classList.remove("new-top-tab1");
     }
   };
+
   document.querySelector(".new-row").onclick = (event) => {
     const target = event.target;
-    if (target.className == "new-top-tab") {
+    if (target.classList.contains("new-top-tab")) {
       for (let index = 0; index < tab.length; index++) {
         if (target == tab[index]) {
           showTabsContent(index);
@@ -25,6 +27,7 @@ const tabsNew = () => {
       }
     }
   };
+
   const showTabsContent = (b) => {
     if (content[b].classList.contains("hide")) {
       hideTabsContent(0);
@@ -33,5 +36,8 @@ const tabsNew = () => {
       content[b].classList.add("show");
     }
   };
+
+  return { initTabsNew };
 };
+
 export default tabsNew;

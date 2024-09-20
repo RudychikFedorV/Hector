@@ -1,0 +1,177 @@
+.news {
+  background-color: var(--color-8);
+  padding: 80px 0 180px;
+@include mobile{
+  padding: 50px 0 100px;
+}
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 260px;
+    width: 100%;
+    gap: 30px;
+    margin-inline: auto;
+    border-bottom: 1px solid var(--black-1);
+    margin-bottom: 100px;
+    @include mobile-small {
+      gap: 15px;
+      margin-bottom: 50px;
+      max-width: 200px;
+    }
+    &-tab {
+      display: inline-block;
+      cursor: pointer;
+      font: var(--txt-700-18-ff);
+      letter-spacing: 0.07em;
+      color: var(--grey-2);
+      white-space: nowrap;
+      @include mobile {
+        font: var(--txt-700-14-ff);
+      }
+    }
+    &-tab1 {
+      color: var(--black-1);
+      padding-bottom: 20px;
+      border-bottom: 7px solid var(--black-1);
+      @include mobile {
+        border-bottom: 3px solid var(--black-1);
+      }
+    }
+  }
+
+
+  &-body {
+    display: flex;
+    justify-content: center;
+  }
+  &-body-contents {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &-body-img {
+    position: relative;
+    max-width: 810px;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition-01);
+    &:hover::before {
+      background-image: url(../img/news/shadow-hover.svg);
+    }
+    &:hover &__desc {
+      display: block;
+    }
+    &:hover .news-body-img__btn {
+      color: var(--black-1);
+      background-color: var(--white);
+      border: 1px solid var(--red);
+    }
+    &::before {
+      content: "";
+      background-image: url(../img/news/shadow.svg);
+      background-repeat: no-repeat;
+      background-size: 810px 450px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      transition: var(--transition);
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include mobile-small{
+      height: 380px;
+    }
+    &__block {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 580px;
+      width: 100%;
+      transition: var(--transition);
+      padding: 5px;
+    }
+    &__name {
+      font:var(--txt-700-36-ff);
+      letter-spacing: 0.07em;
+      color: var(--white);
+      margin-bottom: 20px;
+      text-align: center;
+      transition: var(--transition);
+      @include mobile {
+        font:var(--txt-700-24-ff);
+      }
+      @include mobile {
+        font:var(--txt-700-18-ff);
+      }
+    }
+    &__desc {
+      display: none;
+      font:var(--txt-400-18-ff);
+      letter-spacing: 0.07em;
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 30px;
+      transition: var(--transition);
+      @include mobile {
+        font:var(--txt-400-12-ff);
+      }
+    }
+    .news-body-img__btn {
+      color: var(--white);
+      border: 1px solid var(--white);
+      font: var(--txt-400-18-ff);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition: var(--transition);
+      width: 270px;
+      height: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-inline: auto;
+      @include mobile-small{
+        font: var(--txt-400-12-ff);
+        width: 170px;
+        height: 40px;
+      }
+    }
+  }
+  .news-body-contents__btn {
+    margin-top: 70px;
+    color: var(--black-1);
+    border: 1px solid var(--black-1);
+    font: var(--txt-400-18-ff);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    transition: var(--transition);
+    width: 370px;
+    height: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    &:hover {
+        border: 1px solid var(--red);
+        color: var(--white);
+        background-color: var(--red);
+    }
+    @include mobile-small{
+      width: 300px;
+    }
+  }
+}
+
