@@ -1,0 +1,217 @@
+.footer {
+  background: var(--color-11);
+  padding: 150px 0 100px;
+  @include mobile {
+    padding: 80px 0 60px;
+  }
+  &-row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    row-gap: 50px;
+    z-index: 0;
+    &::before{
+        @include pseudo-element;
+        background-image: url(../img/footer/logo3.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1725px;
+        height: 511px;
+        z-index: -1;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  //footer-left
+  &-left {
+    width: 170px;
+    height: 150px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: var(--transition);
+    &:hover {
+      filter: brightness(0);
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      filter: brightness(20);
+    }
+    @include mobile-small {
+      width: 140px;
+      height: 120px;
+    }
+  }
+  //footer-center
+  &-center {
+    display: flex;
+    gap: 20px;
+    @include desktop {
+      flex-direction: column;
+      row-gap: 50px;
+    }
+    @include tablet {
+      flex-direction: row;
+    }
+    @include tablet-small {
+      flex-direction: column;
+    }
+  }
+  &-nav {
+    max-width: 390px;
+    &__title {
+      font: var(--txt-700-30-ff);
+      letter-spacing: 0.07em;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+    &__list {
+      column-count: 2;
+      column-gap: 20px;
+      @include mobile-small {
+        column-count: 1;
+      }
+    }
+    &__link {
+      display: block;
+      font: var(--txt-400-16-250-ff);
+      letter-spacing: 0.07em;
+      color: var(--color-12);
+      margin-bottom: 20px;
+      white-space: nowrap;
+      transition: var(--transition);
+      &:hover {
+        color: var(--color-10);
+      }
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  // footer-right
+  &-right {
+    &__txt {
+      font: var(--txt-400-30-167-ff);
+      letter-spacing: 0.07em;
+      color: var(--white);
+      margin-bottom: 20px;
+      white-space: nowrap;
+      transition: var(--transition);
+      &:hover {
+        color: var(--black-1);
+      }
+      @include mobile-small {
+        font: var(--txt-400-24-167-ff);
+      }
+    }
+    &__social {
+      max-width: 300px;
+      width: 100%;
+      margin-top: 25px;
+      @include flex-center-center;
+      gap: 25px;
+      @include mobile-small {
+        justify-content: start;
+        gap: 15px;
+      }
+      a {
+        display: block;
+        width: 24px;
+        height: 24px;
+        transition: var(--transition);
+        &:hover {
+          filter: brightness(0);
+        }
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+// footer-bottom
+.footer-bottom {
+  background-color: var(--color-13);
+  padding: 35px 0;
+ 
+  &-row {
+    @include flex-spaceBetween-center;
+    gap: 20px;
+    position: relative;
+    z-index: 0;
+    @include tablet-small {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  &-left {
+    display: flex;
+    gap: 20px;
+    &__copyright {
+      display: block;
+      font: var(--txt-400-14-286-ff);
+      letter-spacing: 0.07em;
+      color: var(--color-14);
+      white-space: nowrap;
+      transition: var(--transition);
+      &:hover {
+        color: var(--red);
+      }
+      @include tablet-small {
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+    @include desktop-small {
+      flex-wrap: wrap;
+    }
+    @include tablet-small {
+      flex-direction: column;
+    }
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include mobile-small {
+      flex-wrap: wrap;
+    }
+    &__txt {
+      display: block;
+      font: var(--txt-400-14-ff);
+      letter-spacing: 0.07em;
+      color: var(--color-14);
+      white-space: nowrap;
+      transition: var(--transition);
+      &:hover {
+        color: var(--red);
+      }
+    }
+    &__img {
+      width: 92px;
+      height: 36px;
+      overflow: hidden;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

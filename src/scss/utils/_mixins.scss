@@ -47,32 +47,24 @@ $mobile-small: 480px;
     @content;
   }
 }
-
+// @include pseudo-element;
 @mixin pseudo-element {
   content: "";
   display: block;
   position: absolute;
-  background: var(--color-1);
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 4px;
-  width: 0;
   transition: var(--transition);
 }
 
+// @include flex-center-center;
 @mixin flex-center-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+// @include flex-spaceBetween-center;
 @mixin flex-spaceBetween-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-@mixin flex-spaceAround-center {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+

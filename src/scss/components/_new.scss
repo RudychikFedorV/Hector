@@ -92,9 +92,7 @@
         }
       }
       &__info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+       @include flex-spaceBetween-center;
         gap: 20px;
         margin-bottom: 15px;
       }
