@@ -48,8 +48,17 @@
       gap: 20px;
       row-gap: 80px;
       position: relative;
+      @include tablet {
+        display: none;
+      }
       @include mobile {
         row-gap: 50px;
+      }
+    }
+    .new-body-swiper {
+      display: none;
+      @include tablet {
+        display: block;
       }
     }
     &-item {
@@ -92,7 +101,7 @@
         }
       }
       &__info {
-       @include flex-spaceBetween-center;
+        @include flex-spaceBetween-center;
         gap: 20px;
         margin-bottom: 15px;
       }
@@ -145,4 +154,3 @@
     }
   }
 }
-
