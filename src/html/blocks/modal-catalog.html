@@ -1,0 +1,121 @@
+<div class="catalog" id="myPopup">
+    <div class="container">
+        <div class="catalog-row">
+
+            <a href="#!" class="catalog-top" id="catalogTop" onclick="myPopupClose()">
+                <p class="catalog-top__txt">КАТАЛОГ</p>
+                <span class="catalog-top__icon">
+                    <img src="img/header/arrow.svg" alt="Icon">
+                </span>
+            </a>
+
+            <nav class="catalog-nav">
+                <ul class="catalog-nav__list">
+                    <li class="catalog-nav__item">
+                        <a href="#!" class="catalog-nav__link">Мужская одежда</a>
+                    </li>
+                    <li class="catalog-nav__item">
+                        <a href="#!" class="catalog-nav__link">Женская одежда</a>
+                    </li>
+                    <li class="catalog-nav__item">
+                        <a href="#!" class="catalog-nav__link">Детская одежда</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="catalogs-cloth">
+                <nav class="catalogs-nav">
+                    <h2 class="catalogs-nav__title">Верхняя одежда</h2>
+                    <ul class="catalogs-nav__list">
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Футболки ПОЛО</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Лоргсливы</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Свитшоте Регланы</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Толстовки Худи</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Анораки Ветровки</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Спортивные штаны</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="catalogs-nav">
+                    <h2 class="catalogs-nav__title">Штаны</h2>
+                    <ul class="catalogs-nav__list">
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Футболки ПОЛО</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Лоргсливы</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Свитшоте Регланы</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Толстовки Худи</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Анораки Ветровки</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Спортивные штаны</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="catalogs-nav">
+                    <h2 class="catalogs-nav__title">Аксессуары</h2>
+                    <ul class="catalogs-nav__list">
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Футболки ПОЛО</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Лоргсливы</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Свитшоте Регланы</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Толстовки Худи</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Анораки Ветровки</a>
+                        </li>
+                        <li class="catalogs-nav__item">
+                            <a href="#!" class="catalogs-nav-link">Спортивные штаны</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    const myPopup = document.querySelector("#myPopup");
+    const catalogTop = document.querySelector("#catalogTop");
+    const body = document.body;
+    function myPopupOpen() {
+        if (myPopup.style.display === "none") {
+            myPopup.style.display = "block";
+            // body.classList.add("no-scroll");
+        } else {
+            myPopup.style.display = "none";
+        }
+    }
+    function myPopupClose() {
+        if (myPopup.style.display === "block") {
+            myPopup.style.display = "none";
+            // body.classList.remove("no-scroll");
+        } else {
+            myPopup.style.display = "block";
+        }
+    }
+</script>
