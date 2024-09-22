@@ -1,0 +1,117 @@
+.user {
+  display: none;
+  border: 3px solid var(--black-1);
+  max-width: 697px;
+  width: 100%;
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  padding: 40px 50px;
+  @include tablet-small {
+    padding: 20px 30px;
+    max-width: 500px;
+  }
+  @include mobile {
+    max-width: 400px;
+  }
+  @include mobile-small {
+    max-width: 280px;
+    padding: 15px;
+  }
+  &-close {
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    border: 3px solid var(--black-1);
+    border-radius: 100%;
+    @include flex-center-center;
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    z-index: 102;
+    background-color: var(--white);
+    @include mobile {
+      width: 30px;
+      height: 30px;
+      top: -15px;
+      right: -15px;
+    }
+  }
+  &-top {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+    @include mobile-small {
+      flex-direction: column;
+    }
+  }
+  &-body {
+    @include flex-center-center;
+    flex-direction: column;
+    gap: 50px;
+    &__input {
+      max-width: 375px;
+      width: 100%;
+      border: none;
+      padding-bottom: 5px;
+      border-bottom: 3px solid var(--black-1);
+    }
+    &__btn {
+      margin-bottom: 15px;
+    }
+  }
+  &-footer {
+    text-align: center;
+    &__link {
+      font: var(--txt-500-18-ff);
+      letter-spacing: 0.07em;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: var(--grey-2);
+      transition: var(--transition);
+      &:hover {
+        color: var(--red);
+      }
+      @include mobile-small {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// btns
+.active-black {
+  background-color: var(--black-1);
+  color: var(--white);
+  &:hover {
+    background-color: var(--white);
+    color: var(--black-1);
+  }
+}
+.active-white {
+  color: var(--black-1);
+  background-color: var(--white);
+  &:hover {
+    background-color: var(--black-1);
+    color: var(--white);
+  }
+}
+.login-btn {
+  border: 1px solid var(--black-1);
+  padding: 25px;
+  max-width: 300px;
+  width: 100%;
+  text-transform: uppercase;
+  font: var(--txt-700-18-ff);
+  letter-spacing: 0.07em;
+  transition: var(--transition);
+  cursor: pointer;
+  @include tablet-small {
+    font: var(--txt-700-14-ff);
+    padding: 15px;
+  }
+}
