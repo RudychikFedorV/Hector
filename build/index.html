@@ -60,7 +60,7 @@
 				<img src="img/header/logo.svg" alt="Logo">
 			</a>
 			<div class="header-icons">
-				<a href="#!" class="header-icons__icon">
+				<a href="#!" class="header-icons__icon" onclick="mySearchModal()">
 					<img src="img/header/search.svg" alt="Search">
 				</a>
 				<a href="#!" class="header-icons__icon">
@@ -184,7 +184,6 @@
 </div>
 <script>
     const myPopup = document.querySelector("#myPopup");
-    const catalogTop = document.querySelector("#catalogTop");
     const body = document.body;
     function myPopupOpen() {
         if (myPopup.style.display === "none") {
@@ -202,6 +201,242 @@
             myPopup.style.display = "block";
         }
     }
+</script>
+		<div class="search" id="mySearchBlock">
+    <div class="container">
+        <div class="search-row">
+
+            <div class="search-container">
+                <div class="search-container__icon">
+                    <img src="img/header/search.svg" alt="Search">
+                </div>
+                <input type="text" onclick="mySearch()" id="myInputSearch" placeholder="Поиск по наименованию...">
+                <span class="search-container__close" onclick="mySearchClose()">&times;</span>
+            </div>
+            <div class="search-content" id="myContent">
+                <article class="new-body-item">
+    <a href="#!" class="new-body-item__img">
+        <img src="img/new/new-user.png" alt="Image">
+        <span>
+            <p> new</p>
+        </span>
+    </a>
+    <div class="new-body-item__info">
+        <div class="new-body-item__left">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star-.svg" alt="Star">
+        </div>
+        <div class="new-body-item__right">
+            <p class="new-body-item__right-txt">S</p>
+            <p class="new-body-item__right-txt new-active">M</p>
+            <p class="new-body-item__right-txt">L</p>
+        </div>
+    </div>
+    <a href="#!" class="new-body-item__name">Футболка мужская белая Exclusive - 22032</a>
+    <p class="new-body-item__price">245₴</p>
+</article><article class="new-body-item">
+    <a href="#!" class="new-body-item__img">
+        <img src="img/new/new-user.png" alt="Image">
+        <span>
+            <p> new</p>
+        </span>
+    </a>
+    <div class="new-body-item__info">
+        <div class="new-body-item__left">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star-.svg" alt="Star">
+        </div>
+        <div class="new-body-item__right">
+            <p class="new-body-item__right-txt">S</p>
+            <p class="new-body-item__right-txt new-active">M</p>
+            <p class="new-body-item__right-txt">L</p>
+        </div>
+    </div>
+    <a href="#!" class="new-body-item__name">Футболка мужская красная Exclusive - 22032</a>
+    <p class="new-body-item__price">245₴</p>
+</article><article class="new-body-item">
+    <a href="#!" class="new-body-item__img">
+        <img src="img/new/new-user.png" alt="Image">
+        <span>
+            <p> new</p>
+        </span>
+    </a>
+    <div class="new-body-item__info">
+        <div class="new-body-item__left">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star-.svg" alt="Star">
+        </div>
+        <div class="new-body-item__right">
+            <p class="new-body-item__right-txt">S</p>
+            <p class="new-body-item__right-txt new-active">M</p>
+            <p class="new-body-item__right-txt">L</p>
+        </div>
+    </div>
+    <a href="#!" class="new-body-item__name">Футболка мужская синяя Exclusive - 22032</a>
+    <p class="new-body-item__price">245₴</p>
+</article><article class="new-body-item">
+    <a href="#!" class="new-body-item__img">
+        <img src="img/new/new-user.png" alt="Image">
+        <span>
+            <p> new</p>
+        </span>
+    </a>
+    <div class="new-body-item__info">
+        <div class="new-body-item__left">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star-.svg" alt="Star">
+        </div>
+        <div class="new-body-item__right">
+            <p class="new-body-item__right-txt">S</p>
+            <p class="new-body-item__right-txt new-active">M</p>
+            <p class="new-body-item__right-txt">L</p>
+        </div>
+    </div>
+    <a href="#!" class="new-body-item__name">Футболка мужская желтая Exclusive - 22032</a>
+    <p class="new-body-item__price">245₴</p>
+</article><article class="new-body-item">
+    <a href="#!" class="new-body-item__img">
+        <img src="img/new/new-user.png" alt="Image">
+        <span>
+            <p> new</p>
+        </span>
+    </a>
+    <div class="new-body-item__info">
+        <div class="new-body-item__left">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star-.svg" alt="Star">
+        </div>
+        <div class="new-body-item__right">
+            <p class="new-body-item__right-txt">S</p>
+            <p class="new-body-item__right-txt new-active">M</p>
+            <p class="new-body-item__right-txt">L</p>
+        </div>
+    </div>
+    <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+    <p class="new-body-item__price">245₴</p>
+</article><article class="new-body-item">
+    <a href="#!" class="new-body-item__img">
+        <img src="img/new/new-user.png" alt="Image">
+        <span>
+            <p> new</p>
+        </span>
+    </a>
+    <div class="new-body-item__info">
+        <div class="new-body-item__left">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star-.svg" alt="Star">
+        </div>
+        <div class="new-body-item__right">
+            <p class="new-body-item__right-txt">S</p>
+            <p class="new-body-item__right-txt new-active">M</p>
+            <p class="new-body-item__right-txt">L</p>
+        </div>
+    </div>
+    <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+    <p class="new-body-item__price">245₴</p>
+</article><article class="new-body-item">
+    <a href="#!" class="new-body-item__img">
+        <img src="img/new/new-user.png" alt="Image">
+        <span>
+            <p> new</p>
+        </span>
+    </a>
+    <div class="new-body-item__info">
+        <div class="new-body-item__left">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star-.svg" alt="Star">
+        </div>
+        <div class="new-body-item__right">
+            <p class="new-body-item__right-txt">S</p>
+            <p class="new-body-item__right-txt new-active">M</p>
+            <p class="new-body-item__right-txt">L</p>
+        </div>
+    </div>
+    <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+    <p class="new-body-item__price">245₴</p>
+</article><article class="new-body-item">
+    <a href="#!" class="new-body-item__img">
+        <img src="img/new/new-user.png" alt="Image">
+        <span>
+            <p> new</p>
+        </span>
+    </a>
+    <div class="new-body-item__info">
+        <div class="new-body-item__left">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star+.svg" alt="Star">
+            <img src="img/new/star-.svg" alt="Star">
+        </div>
+        <div class="new-body-item__right">
+            <p class="new-body-item__right-txt">S</p>
+            <p class="new-body-item__right-txt new-active">M</p>
+            <p class="new-body-item__right-txt">L</p>
+        </div>
+    </div>
+    <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+    <p class="new-body-item__price">245₴</p>
+</article>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const mySearchModal = () => {
+        const mySearchBlock = document.querySelector("#mySearchBlock");
+        if (mySearchBlock.style.display === "none") {
+            mySearchBlock.style.display = "block";
+        } else {
+            mySearchBlock.style.display = "none";
+        }
+    }
+    const mySearchClose = () => {
+        const mySearchBlock = document.querySelector("#mySearchBlock");
+        if (mySearchBlock.style.display === "block") {
+            mySearchBlock.style.display = "none";
+        }
+    }
+
+    const mySearch = () => {
+        let a;
+        let index;
+        let input = document.querySelector("#myInputSearch");
+        let filter = input.value.toUpperCase();
+        let ul = document.querySelector("#myContent");
+        let li = ul.getElementsByTagName("li");
+
+        for (let index = 0; index < li.length; index++) {
+            a = li[index].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[index].style.display = "";
+            } else {
+                li[index].style.display = "none";
+            }
+        }
+    };
 </script>
 		<main class="main">
 			<section class="welcome">
@@ -440,7 +675,7 @@
             <p class="new-body-item__right-txt">L</p>
         </div>
     </div>
-    <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+    <a href="#!" class="new-body-item__name">Футболка мужская белая Exclusive - 22032</a>
     <p class="new-body-item__price">245₴</p>
 </article><article class="new-body-item">
     <a href="#!" class="new-body-item__img">
@@ -463,7 +698,7 @@
             <p class="new-body-item__right-txt">L</p>
         </div>
     </div>
-    <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+    <a href="#!" class="new-body-item__name">Футболка мужская красная Exclusive - 22032</a>
     <p class="new-body-item__price">245₴</p>
 </article><article class="new-body-item">
     <a href="#!" class="new-body-item__img">
@@ -486,7 +721,7 @@
             <p class="new-body-item__right-txt">L</p>
         </div>
     </div>
-    <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+    <a href="#!" class="new-body-item__name">Футболка мужская синяя Exclusive - 22032</a>
     <p class="new-body-item__price">245₴</p>
 </article><article class="new-body-item">
     <a href="#!" class="new-body-item__img">
@@ -509,7 +744,7 @@
             <p class="new-body-item__right-txt">L</p>
         </div>
     </div>
-    <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+    <a href="#!" class="new-body-item__name">Футболка мужская желтая Exclusive - 22032</a>
     <p class="new-body-item__price">245₴</p>
 </article><article class="new-body-item">
     <a href="#!" class="new-body-item__img">
@@ -629,7 +864,7 @@
                 <p class="new-body-item__right-txt">L</p>
             </div>
         </div>
-        <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+        <a href="#!" class="new-body-item__name">Футболка мужская белая Exclusive - 22032</a>
         <p class="new-body-item__price">245₴</p>
     </article>
 </div><div class="swiper-slide">
@@ -654,7 +889,7 @@
                 <p class="new-body-item__right-txt">L</p>
             </div>
         </div>
-        <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+        <a href="#!" class="new-body-item__name">Футболка мужская красная Exclusive - 22032</a>
         <p class="new-body-item__price">245₴</p>
     </article>
 </div><div class="swiper-slide">
@@ -679,7 +914,7 @@
                 <p class="new-body-item__right-txt">L</p>
             </div>
         </div>
-        <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+        <a href="#!" class="new-body-item__name">Футболка мужская синяя Exclusive - 22032</a>
         <p class="new-body-item__price">245₴</p>
     </article>
 </div><div class="swiper-slide">
@@ -704,7 +939,7 @@
                 <p class="new-body-item__right-txt">L</p>
             </div>
         </div>
-        <a href="#!" class="new-body-item__name">Футболка мужская Exclusive - 22032</a>
+        <a href="#!" class="new-body-item__name">Футболка мужская желтая Exclusive - 22032</a>
         <p class="new-body-item__price">245₴</p>
     </article>
 </div><div class="swiper-slide">

@@ -1,47 +1,55 @@
 [
   {
+    "id": 1,
+    "IMG": "user",
+    "name": "Футболка мужская белая Exclusive - 22032",
+    "price": "245₴",
+    "link": "#!"
+  },
+  {
+    "id": 2,
+    "IMG": "user",
+    "name": "Футболка мужская красная Exclusive - 22032",
+    "price": "245₴",
+    "link": "#!"
+  },
+  {
+    "id": 3,
+    "IMG": "user",
+    "name": "Футболка мужская синяя Exclusive - 22032",
+    "price": "245₴",
+    "link": "#!"
+  },
+  {
+    "id": 4,
+    "IMG": "user",
+    "name": "Футболка мужская желтая Exclusive - 22032",
+    "price": "245₴",
+    "link": "#!"
+  },
+  {
+    "id": 5,
     "IMG": "user",
     "name": "Футболка мужская Exclusive - 22032",
     "price": "245₴",
     "link": "#!"
   },
   {
+    "id": 6,
     "IMG": "user",
     "name": "Футболка мужская Exclusive - 22032",
     "price": "245₴",
     "link": "#!"
   },
   {
+    "id": 7,
     "IMG": "user",
     "name": "Футболка мужская Exclusive - 22032",
     "price": "245₴",
     "link": "#!"
   },
   {
-    "IMG": "user",
-    "name": "Футболка мужская Exclusive - 22032",
-    "price": "245₴",
-    "link": "#!"
-  },
-  {
-    "IMG": "user",
-    "name": "Футболка мужская Exclusive - 22032",
-    "price": "245₴",
-    "link": "#!"
-  },
-  {
-    "IMG": "user",
-    "name": "Футболка мужская Exclusive - 22032",
-    "price": "245₴",
-    "link": "#!"
-  },
-  {
-    "IMG": "user",
-    "name": "Футболка мужская Exclusive - 22032",
-    "price": "245₴",
-    "link": "#!"
-  },
-  {
+    "id": 8,
     "IMG": "user",
     "name": "Футболка мужская Exclusive - 22032",
     "price": "245₴",
