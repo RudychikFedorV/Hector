@@ -6,12 +6,11 @@
                 <div class="search-container__icon">
                     <img src="img/header/search.svg" alt="Search">
                 </div>
-                <input type="text" onclick="mySearch()" id="myInputSearch" placeholder="Поиск ...">
+                <input type="text" onkeyup="mySearch()" id="myInputSearch" placeholder="Поиск ...">
                 <span class="search-container__close" onclick="mySearchClose()">&times;</span>
             </div>
             <div class="search-content" id="myContent">
                 @@loop('new-body-item.html', '../data/new.json')
-
             </div>
         </div>
     </div>

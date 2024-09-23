@@ -16,13 +16,13 @@
     const spanCloseRecovery = document.querySelector(".close-recovery");
     const myBtnRecovery = document.querySelector("#myBtnRecovery");
 
+  
     ForgotYourPassword.onclick = () => {
         myUserLogin.style.display = "none";
         myUserRecovery.style.display = "block";
     }
     spanCloseRecovery.onclick = () => {
         myUserRecovery.style.display = "none";
-        myBtnRecovery.style.display = "none";
     };
     myBtnRecovery.onclick = () => {
         myUserRecovery.style.display = "none";

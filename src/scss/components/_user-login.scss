@@ -25,40 +25,6 @@
     max-width: 280px;
     padding: 15px;
   }
-  &::before {
-    @include pseudo-element;
-    background-image: url(../img/user-login/logo-big.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 116px;
-    height: 134px;
-    top: -58px;
-    left: -67px;
-    z-index: -99;
-    @include mobile {
-      width: 80px;
-      height: 100px;
-      top: -40px;
-      left: -50px;
-    }
-  }
-  &::after {
-    @include pseudo-element;
-    background-image: url(../img/user-login/logo-small.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 68px;
-    height: 78px;
-    bottom: -39px;
-    right: -34px;
-    z-index: -99;
-    @include mobile {
-      width: 40px;
-      height: 50px;
-      bottom: -25px;
-      right: -20px;
-    }
-  }
   &-close {
     width: 40px;
     height: 40px;
