@@ -1,0 +1,20 @@
+.user-recovery {
+  max-width: 500px;
+  padding: 0;
+    display: none;
+  @include tablet-small {
+    max-width: 400px;
+  }
+  @include mobile {
+    max-width: 320px;
+  }
+  @include mobile-small {
+    max-width: 250px;
+  }
+  .login-btn{
+    max-width: 500px;
+  }
+  .user-body {
+    padding: 0 10px;
+  }
+}

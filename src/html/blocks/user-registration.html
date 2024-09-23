@@ -1,0 +1,39 @@
+<form class="user user-registration" id="myUserRegistration">
+    <span class="user-close" id="myCloseRegistration">&times;</span>
+    <div class="user-top">
+        <button class="user-top__btn login-btn active-white ">Логин</button>
+        <button class="user-top__btn active-black login-btn">Регистрация</button>
+    </div>
+    <div class="user-body">
+        <input type="text" class="user-body__input" required placeholder="Введите имя *">
+        <input type="text" class="user-body__input" required placeholder="Ваш Город *">
+        <input type="tel" class="user-body__input" required placeholder="Введите телефон *">
+        <input type="email" class="user-body__input" required placeholder="Введите email *">
+        <input type="password" class="user-body__input" required placeholder="Введите пароль *">
+        <input type="password" class="user-body__input" required placeholder="Подтвердите  пароль *">
+        <button class="user-body__btn active-black login-btn" id="myUserRegister">Зарегистрироваться</button>
+    </div>
+</form>
+
+<script>
+    const myUserRegistration = document.querySelector("#myUserRegistration");
+    const myCloseRegistration = document.querySelector("#myCloseRegistration");
+    const myBtnRegistration = document.querySelector("#myBtnRegistration");
+
+    myBtnRegistration.onclick = () => {
+        myUserRegistration.style.display = "block";
+        myUserLogin.style.display = "none";
+        myUserRecovery.style.display = "none";
+    };
+    myCloseRegistration.onclick = () => {
+        myUserRegistration.style.display = "none";
+    };
+    myUserRegister.onclick = () => {
+        myUserRegistration.style.display = "none";
+    };
+    window.onclick = (event) => {
+        if (event.target == myUserRegistration) {
+            myUserRegistration.style.display = "none";
+        }
+    };
+</script>

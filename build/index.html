@@ -442,7 +442,7 @@
     <span class="user-close">&times;</span>
     <div class="user-top">
         <button class="user-top__btn active-black login-btn">Логин</button>
-        <button class="user-top__btn active-white login-btn">Регистрация</button>
+        <button class="user-top__btn active-white login-btn" id="myBtnRegistration">Регистрация</button>
     </div>
     <div class="user-body">
         <input type="email" class="user-body__input" required placeholder="Введите email">
@@ -450,7 +450,7 @@
         <button class="user-body__btn active-black login-btn">Войти</button>
     </div>
     <div class="user-footer">
-        <a href="#!" class="user-footer__link">Забыли пароль?</a>
+        <a href="#!" class="user-footer__link" id="ForgotYourPassword">Забыли пароль?</a>
     </div>
 </form>
 
@@ -468,6 +468,80 @@
     window.onclick = (event) => {
         if (event.target == myUserLogin) {
             myUserLogin.style.display = "none";
+        }
+    };
+</script>
+		<form class="user user-recovery" id="myUserRecovery">
+    <span class="user-close close-recovery">&times;</span>
+    <div class="user-top">
+        <button class="user-top__btn active-black login-btn">Восстановление пароля</button>
+    </div>
+    <div class="user-body">
+        <input type="email" class="user-body__input" placeholder="Введите email" required>
+        <button class="user-body__btn active-black login-btn" id="myBtnRecovery">Восстановить</button>
+    </div>
+
+</form>
+
+<script>
+    const ForgotYourPassword = document.querySelector('#ForgotYourPassword')
+    const myUserRecovery = document.querySelector("#myUserRecovery");
+    const spanCloseRecovery = document.querySelector(".close-recovery");
+    const myBtnRecovery = document.querySelector("#myBtnRecovery");
+
+    ForgotYourPassword.onclick = () => {
+        myUserLogin.style.display = "none";
+        myUserRecovery.style.display = "block";
+    }
+    spanCloseRecovery.onclick = () => {
+        myUserRecovery.style.display = "none";
+        myBtnRecovery.style.display = "none";
+    };
+    myBtnRecovery.onclick = () => {
+        myUserRecovery.style.display = "none";
+    };
+    window.onclick = (event) => {
+        if (event.target == myUserRecovery) {
+            myUserRecovery.style.display = "none";
+        }
+    };
+</script>
+		<form class="user user-registration" id="myUserRegistration">
+    <span class="user-close" id="myCloseRegistration">&times;</span>
+    <div class="user-top">
+        <button class="user-top__btn login-btn active-white ">Логин</button>
+        <button class="user-top__btn active-black login-btn">Регистрация</button>
+    </div>
+    <div class="user-body">
+        <input type="text" class="user-body__input" required placeholder="Введите имя *">
+        <input type="text" class="user-body__input" required placeholder="Ваш Город *">
+        <input type="tel" class="user-body__input" required placeholder="Введите телефон *">
+        <input type="email" class="user-body__input" required placeholder="Введите email *">
+        <input type="password" class="user-body__input" required placeholder="Введите пароль *">
+        <input type="password" class="user-body__input" required placeholder="Подтвердите  пароль *">
+        <button class="user-body__btn active-black login-btn" id="myUserRegister">Зарегистрироваться</button>
+    </div>
+</form>
+
+<script>
+    const myUserRegistration = document.querySelector("#myUserRegistration");
+    const myCloseRegistration = document.querySelector("#myCloseRegistration");
+    const myBtnRegistration = document.querySelector("#myBtnRegistration");
+
+    myBtnRegistration.onclick = () => {
+        myUserRegistration.style.display = "block";
+        myUserLogin.style.display = "none";
+        myUserRecovery.style.display = "none";
+    };
+    myCloseRegistration.onclick = () => {
+        myUserRegistration.style.display = "none";
+    };
+    myUserRegister.onclick = () => {
+        myUserRegistration.style.display = "none";
+    };
+    window.onclick = (event) => {
+        if (event.target == myUserRegistration) {
+            myUserRegistration.style.display = "none";
         }
     };
 </script>

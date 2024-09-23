@@ -1,0 +1,35 @@
+<form class="user user-recovery" id="myUserRecovery">
+    <span class="user-close close-recovery">&times;</span>
+    <div class="user-top">
+        <button class="user-top__btn active-black login-btn">Восстановление пароля</button>
+    </div>
+    <div class="user-body">
+        <input type="email" class="user-body__input" placeholder="Введите email" required>
+        <button class="user-body__btn active-black login-btn" id="myBtnRecovery">Восстановить</button>
+    </div>
+
+</form>
+
+<script>
+    const ForgotYourPassword = document.querySelector('#ForgotYourPassword')
+    const myUserRecovery = document.querySelector("#myUserRecovery");
+    const spanCloseRecovery = document.querySelector(".close-recovery");
+    const myBtnRecovery = document.querySelector("#myBtnRecovery");
+
+    ForgotYourPassword.onclick = () => {
+        myUserLogin.style.display = "none";
+        myUserRecovery.style.display = "block";
+    }
+    spanCloseRecovery.onclick = () => {
+        myUserRecovery.style.display = "none";
+        myBtnRecovery.style.display = "none";
+    };
+    myBtnRecovery.onclick = () => {
+        myUserRecovery.style.display = "none";
+    };
+    window.onclick = (event) => {
+        if (event.target == myUserRecovery) {
+            myUserRecovery.style.display = "none";
+        }
+    };
+</script>
