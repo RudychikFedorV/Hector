@@ -10,7 +10,6 @@ body {
 .wrapper {
   max-width: 1920px;
   margin-inline: auto;
-
 }
 .container {
   max-width: 1721px;
@@ -22,4 +21,7 @@ body {
 }
 .show {
   display: block;
+}
+.stop-scroll {
+  overflow: hidden;
 }

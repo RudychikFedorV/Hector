@@ -47,8 +47,9 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    overflow: auto;
+    overflow-y: auto;
     max-height: 650px;
+    overscroll-behavior: none;
     &::-webkit-scrollbar {
       border-radius: 2px;
       width: 5px;

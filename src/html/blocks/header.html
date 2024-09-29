@@ -57,7 +57,9 @@
 </header>
 <script>
 	function navToggle() {
+		const body = document.body
 		document.getElementById("headerUl").classList.toggle("_active");
 		document.getElementById("headerBackdrop").classList.toggle("_active");
+		body.classList.toggle("stop-scroll");
 	}	
 </script>
